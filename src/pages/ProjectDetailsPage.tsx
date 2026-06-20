@@ -3,6 +3,25 @@ import SiteHeader from "../components/SiteHeader";
 import Footer from "../components/Footer";
 import { projects } from "../data/projects";
 
+/**
+ * Convert a YouTube watch / share / embed URL into an embeddable URL.
+ * Supports youtu.be/<id>, watch?v=<id>, and /embed/<id> forms.
+ * Returns null if no video id can be extracted.
+ */
+function toYouTubeEmbedUrl(url: string): string | null {
+  if (!url) return null;
+  const patterns = [
+    /youtu\.be\/([\w-]{11})/,
+    /[?&]v=([\w-]{11})/,
+    /youtube\.com\/embed\/([\w-]{11})/,
+  ];
+  for (const re of patterns) {
+    const match = url.match(re);
+    if (match) return `https://www.youtube.com/embed/${match[1]}`;
+  }
+  return null;
+}
+
 export default function ProjectDetailsPage() {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
@@ -14,6 +33,8 @@ export default function ProjectDetailsPage() {
   const similarProjects = projects
     .filter((p) => p.slug !== project.slug)
     .slice(0, 4);
+
+  const videoEmbedUrl = toYouTubeEmbedUrl(project.videoUrl);
 
   return (
     <div className="min-h-dvh bg-white text-slate-900">
@@ -43,6 +64,25 @@ export default function ProjectDetailsPage() {
             </div>
           </div>
         </div>
+
+        {/* Intro Video */}
+        {videoEmbedUrl && (
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold text-slate-900 mb-6">
+              Project Video
+            </h2>
+            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-900">
+              <iframe
+                src={videoEmbedUrl}
+                title={`${project.title} project video`}
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </section>
+        )}
 
         {/* About Section */}
         <section className="mt-12 max-w-2xl space-y-8">

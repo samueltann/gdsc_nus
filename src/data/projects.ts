@@ -6,6 +6,8 @@ export type Project = {
   problemStatement: string;
   projectGoals: string;
   image: string;
+  /** YouTube watch/share URL for the project intro video. Empty until uploaded. */
+  videoUrl: string;
   technologies: string[];
 };
 
@@ -21,6 +23,7 @@ export const projects: Project[] = [
     projectGoals:
       "We developed a Volunteer Management System that centralises volunteer profiles, automates communications, tracks credentials and activity, manages training bookings, and provides dashboards for easier reporting. This helps CFL reduce administrative workload and better support volunteers in carrying out its mission.",
     image: "/caringforlife.png",
+    videoUrl: "https://youtu.be/XXY-J9MakJQ",
     technologies: [],
   },
   {
@@ -34,6 +37,7 @@ export const projects: Project[] = [
     projectGoals:
       "We developed FetchIt, a Dog Shelter Management System that centralises dog records, medical and adoption information, sponsorship details, and shelter data. With role-based access and an interactive dashboard, ASD can securely manage information while tracking medical expenses, adoption rates, sponsorship coverage, and shelter occupancy more easily.",
     image: "/actionforsingapore.png",
+    videoUrl: "https://youtu.be/zsNt_sJ4UrE",
     technologies: [],
   },
   {
@@ -47,6 +51,7 @@ export const projects: Project[] = [
     projectGoals:
       "We developed a website-based chatbot system that allows migrant workers to reserve shop slots easily, while automating eligibility checks, confirmations, reminders, and rescheduling. Staff can also use a real-time dashboard to track bookings, attendance, and slot capacity, creating a smoother and fairer booking process.",
     image: "/itsraining.png",
+    videoUrl: "https://youtu.be/hZqaUTU3xys",
     technologies: [],
   },
   {
@@ -60,6 +65,7 @@ export const projects: Project[] = [
     projectGoals:
       "We developed a Volunteer and Donor Management System that centralises volunteer onboarding, project matching, donor records, donations, automated receipts, and communication. Real-time dashboards also help Siloam track volunteer participation, donor contributions, and programme activity more easily.",
     image: "/siloamxperience.png",
+    videoUrl: "https://youtu.be/5z93z310RVE",
     technologies: [],
   },
   {
@@ -73,6 +79,7 @@ export const projects: Project[] = [
     projectGoals:
       "We developed an Order and Runner Management System that allows volunteers to place, track, and update orders, while runners manage order statuses in real time. This improves coordination, reduces manual follow-ups, and helps ensure elderly beneficiaries receive support more smoothly.",
     image: "/volunteer_switchboard.png",
+    videoUrl: "https://youtu.be/WxDuUCiMrf8",
     technologies: [],
   },
 ];
