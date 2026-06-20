@@ -1,9 +1,11 @@
 export type Project = {
   slug: string;
   title: string;
-  description: string;
-  image: string;
   summary: string;
+  organisationContext: string;
+  problemStatement: string;
+  projectGoals: string;
+  image: string;
   technologies: string[];
 };
 
@@ -12,7 +14,12 @@ export const projects: Project[] = [
     slug: "caring-for-life",
     title: "Caring For Life",
     summary: "Equip individuals to prevent suicide and build resilience within the community.",
-    description: "Singapore-based charity dedicated to suicide prevention, offering training, support, and advocacy to empower individuals and communities in recognizing and addressing suicide risk. Our goal is to develop a Volunteer Management System that automates communications, tracks volunteer credentials and activity, manages training bookings, and provides visual dashboards for easier reporting.",
+    organisationContext:
+      "Caring for Life (CFL) is a Singapore-based charity working towards building a suicide-resilient community through prevention training, resilience-building programmes, advocacy, and community support.",
+    problemStatement:
+      "As CFL's work relies on trained volunteers and facilitators, managing volunteer records, credentials, training attendance, availability, and communications manually can become difficult as the organisation grows.",
+    projectGoals:
+      "We developed a Volunteer Management System that centralises volunteer profiles, automates communications, tracks credentials and activity, manages training bookings, and provides dashboards for easier reporting. This helps CFL reduce administrative workload and better support volunteers in carrying out its mission.",
     image: "/caringforlife.png",
     technologies: [],
   },
@@ -20,7 +27,12 @@ export const projects: Project[] = [
     slug: "action-for-singapore-dogs",
     title: "Action for Singapore Dogs",
     summary: "Rescuing, fostering, and rehoming stray and abandoned dogs in Singapore",
-    description: "Non-profit organisation dedicated to rescuing, fostering, and rehoming stray and abandoned dogs in Singapore while promoting sterilization, responsible pet ownership, and public awareness of local dog welfare. Our goal is to develop a Dog Management System with role-based access to protect sensitive information and store comprehensive, searchable dog profiles including medical and adoption records, while implementing an interactive dashboard on medical expenses, adoption rates, and shelter occupancy.",
+    organisationContext:
+      "Action for Singapore Dogs (ASD) is a registered charity established in December 2000, dedicated to improving the welfare of stray and abandoned dogs in Singapore through a strict no-kill approach. Their work spans rescue, rehabilitation, fostering, adoption, sterilisation, public education, fundraising, and volunteer support.",
+    problemStatement:
+      "Managing shelter operations involves many moving parts, including dog profiles, medical histories, vet bills, sponsorship records, adoption status, shelter capacity, and volunteer access. When this information is stored across scattered spreadsheets or manual records, it becomes difficult to search, update, and share securely.",
+    projectGoals:
+      "We developed FetchIt, a Dog Shelter Management System that centralises dog records, medical and adoption information, sponsorship details, and shelter data. With role-based access and an interactive dashboard, ASD can securely manage information while tracking medical expenses, adoption rates, sponsorship coverage, and shelter occupancy more easily.",
     image: "/actionforsingapore.png",
     technologies: [],
   },
@@ -28,7 +40,12 @@ export const projects: Project[] = [
     slug: "itsrainingraincoats",
     title: "ItsRainingRaincoats",
     summary: "Supports migrant workers by providing essentials, educational programs, and community integration initiatives.",
-    description: "A volunteer organisation that supports migrant workers by providing essentials, educational programs, and community integration initiatives. Our goal is to develop a Website-based chatbot system that allows migrant workers to easily reserve weekend shop slots, automates eligibility checks, confirmations, reminders, and rescheduling. Staff will be provided with a real-time dashboard for tracking.",
+    organisationContext:
+      "ItsRainingRaincoats (IRR) is a Singapore charity that supports migrant worker welfare by building bridges of integration between migrant workers and residents in Singapore. Through initiatives such as donation drives, community programmes, and the inspIRRe Store, IRR provides migrant workers with access to essential items and support. The inspIRRe Store allows eligible male migrant workers on Work Permits to collect free essentials such as clothes, toiletries, bags, snacks, and electronics.",
+    problemStatement:
+      "Managing weekend shop visits manually can be time-consuming, as staff need to check eligibility, confirm bookings, send reminders, handle rescheduling, and track attendance across limited shop slots.",
+    projectGoals:
+      "We developed a website-based chatbot system that allows migrant workers to reserve shop slots easily, while automating eligibility checks, confirmations, reminders, and rescheduling. Staff can also use a real-time dashboard to track bookings, attendance, and slot capacity, creating a smoother and fairer booking process.",
     image: "/itsraining.png",
     technologies: [],
   },
@@ -36,7 +53,12 @@ export const projects: Project[] = [
     slug: "siloamxperience",
     title: "SiloamXperience",
     summary: "Creating sustainable change in underprivileged communities by providing quality education, vocational training, and humanitarian support in Singapore and Cambodia.",
-    description: "Volunteer-driven organisation committed to creating sustainable change in underprivileged communities by providing quality education, vocational training, and humanitarian support in Singapore and Cambodia. Our goal is to develop a Volunteer and Donor Management System that centralises volunteer onboarding, project matching, performance tracking, and communication, while managing donor data, donations, and automated receipts, all with real-time dashboards for insights.",
+    organisationContext:
+      "Siloam Xperience is a non-profit organisation committed to creating sustainable change in underprivileged communities through quality education, vocational training, and humanitarian support in Singapore and Cambodia.",
+    problemStatement:
+      "As Siloam works across different programmes, locations, volunteers, and donor groups, managing information manually can become increasingly difficult. Volunteer onboarding, project assignments, performance tracking, communications, donor records, donation histories, and receipt generation all require accurate and timely coordination. Without a centralised system, staff may face duplicated work, scattered records, and limited visibility over volunteer engagement and donor support.",
+    projectGoals:
+      "We developed a Volunteer and Donor Management System that centralises volunteer onboarding, project matching, donor records, donations, automated receipts, and communication. Real-time dashboards also help Siloam track volunteer participation, donor contributions, and programme activity more easily.",
     image: "/siloamxperience.png",
     technologies: [],
   },
@@ -44,7 +66,12 @@ export const projects: Project[] = [
     slug: "the-volunteer-switchboard",
     title: "The Volunteer Switchboard",
     summary: "Connects individuals with meaningful volunteer opportunities across various causes, fostering purposeful and impactful giving experiences.",
-    description: "Organisation that connects individuals with meaningful volunteer opportunities across various causes, fostering purposeful and impactful giving experiences. This project’s focus being on the elderly community. Our goal is to develop a Order and Runner Management System that lets volunteers place, track, and update orders, while runners manage order statuses and edits.",
+    organisationContext:
+      "The Volunteer Switchboard connects individuals and organisations with meaningful volunteer opportunities across different social causes. For this project, the focus is on supporting elderly beneficiaries through order and delivery coordination.",
+    problemStatement:
+      "Managing these orders manually can be difficult, as volunteers and runners need to handle order submissions, updates, assignments, status tracking, and last-minute changes.",
+    projectGoals:
+      "We developed an Order and Runner Management System that allows volunteers to place, track, and update orders, while runners manage order statuses in real time. This improves coordination, reduces manual follow-ups, and helps ensure elderly beneficiaries receive support more smoothly.",
     image: "/volunteer_switchboard.png",
     technologies: [],
   },
