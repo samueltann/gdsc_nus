@@ -13,7 +13,7 @@ export default function ProjectDetailsPage() {
 
   const similarProjects = projects
     .filter((p) => p.slug !== project.slug)
-    .slice(0, 3);
+    .slice(0, 4);
 
   return (
     <div className="min-h-dvh bg-white text-slate-900">
@@ -45,13 +45,31 @@ export default function ProjectDetailsPage() {
         </div>
 
         {/* About Section */}
-        <section className="mt-12">
-          <h2 className="text-xl font-semibold text-slate-900 mb-6">
-            About
-          </h2>
-          <p className="text-base leading-7 text-slate-700 max-w-2xl">
-            {project.description}
-          </p>
+        <section className="mt-12 max-w-2xl space-y-8">
+          <div>
+            <h2 className="text-xl font-semibold text-slate-900 mb-3">
+              Organisation Context
+            </h2>
+            <p className="text-base leading-7 text-slate-700">
+              {project.organisationContext}
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-slate-900 mb-3">
+              Problem Statement
+            </h2>
+            <p className="text-base leading-7 text-slate-700">
+              {project.problemStatement}
+            </p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold text-slate-900 mb-3">
+              Project Goals and Solution
+            </h2>
+            <p className="text-base leading-7 text-slate-700">
+              {project.projectGoals}
+            </p>
+          </div>
         </section>
 
         {similarProjects.length > 0 && (
